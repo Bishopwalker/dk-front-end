@@ -68,7 +68,7 @@ const Signup = () => {
                 <Link to='/login'>
                     <Button>Sign Up</Button>
                 </Link>
-                <Link to={'/landing'}>
+                <Link to={'/'}>
                     <Typography variant={'subtitle2'} gutterBottom align="center"   >
                        Return to Landing
                     </Typography>

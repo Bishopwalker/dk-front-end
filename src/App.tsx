@@ -8,6 +8,8 @@ import Footer from "./components/footer/Footer";
 import {useAppSelector} from "./redux/hooks";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
+// @ts-ignore
+import ClassAppointments from "./components/appointment/ClassAppointments.jsx";
 
 function App() {
 const screenTitle = useAppSelector(state => state.title)
@@ -25,6 +27,7 @@ const screenTitle = useAppSelector(state => state.title)
 			  <Route path="/" element={<Home />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} />
+				<Route path="/appointment" element={<ClassAppointments/>} />
 			</Routes>
 	    </BrowserRouter>
 		<Footer />
