@@ -28,7 +28,7 @@ const { productId } = useParams();
   const fetchProduct = async () => {
     try {
       const response = await axios.get(
-          `http://localhost:5000/auth/stripe/products/${productId}`
+          `http://3.85.8.238:5000/auth/stripe/products/${productId}`
       );
       setProduct(response.data);
     } catch (error) {
@@ -52,7 +52,7 @@ const { productId } = useParams();
     console.log('checking out');
     try {
       // Constructing the URL with the productID query parameter
-      const url = `http://localhost:5000/auth/stripe/create-checkout-session/${userInfo.id}?productID=${productId}`;
+      const url = `http://3.85.8.238:5000/auth/stripe/create-checkout-session/${userInfo.id}?productID=${productId}`;
       const response = await axios.get(url, {
             headers: {
               'Authorization': `Bearer ${userInfo.token}`, // if user token is stored in userInfo object

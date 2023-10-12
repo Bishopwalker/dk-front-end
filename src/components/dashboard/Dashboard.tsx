@@ -19,7 +19,7 @@ const Dashboard = () => {
 			navigate('/login');
 		}
 	}, [userInfo, navigate]);
-
+console.log(userInfo)
 	const handleLogout = () => {
 		dispatch(clearUserInfo()); // Dispatch the clearUserInfo action to clear user data
 		// Here, you can also perform additional tasks like redirecting the user to the login page
